@@ -84,7 +84,11 @@
                 vm.createMakers(map);
             }
 
+            function googleError(){
+                document.getElementById('map').innerHTML = "<h1>Ooops.. Could not load map</h1>"
+            }
+
          </script>
-         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDw4lZpBqQfgCMNBUpCT7Hik-N58LsK7qQ&callback=initMap"></script>
+         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDw4lZpBqQfgCMNBUpCT7Hik-N58LsK7qQ&callback=initMap" onerror="googleError()"></script>
     </body>
 </html>
