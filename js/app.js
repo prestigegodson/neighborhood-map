@@ -74,6 +74,9 @@ function ViewModel(){
                 var name = data.response.venues ? data.response.venues[0].name : place.name;
                 var addr = data.response.venues[0].location.formattedAddress.join(", ");
                 self.createInfoWindow(name,addr,marker);
+            },
+            error: function(xhr,errStatus){
+                alert(errStatus);
             }
         })
 
